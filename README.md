@@ -21,7 +21,9 @@ Frontend:
     - NPM: In the terminal run `npm install`
     - Yarn: In the terminal run `yarn`
  
- - Finally run `yarn start`
+ - Finally we can start the app with:
+    - NPM: `npm run start`
+    - Yarn: `yarn start`
 
 Once you have both the WordPress CMS running and the React application running open a browser and navigate to http://localhost:3000
 
