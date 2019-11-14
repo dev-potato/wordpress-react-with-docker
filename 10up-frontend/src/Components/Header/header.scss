@@ -1,0 +1,112 @@
+@import '../../Assets/Styles/shared';
+
+.header-wrapper {
+    width: 100vw;
+    box-sizing: border-box;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+
+    
+    .show-nav {
+        display: block;
+        background: $blue;
+        width: 100vw;
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        left: 0;
+    }
+    
+    .hide {
+        left: -100rem;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .mobile-menu-button {
+        position: absolute;
+        left: 0.75rem;
+        top: 0.75rem;
+        height: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 5;        
+        
+        span {
+            background: $white;
+            width: 26px;
+            height: 1.25px;
+            transition: all 0.4s ease-in-out;
+            display: none;
+
+            @media only screen and (max-width: $medium) {
+                display: block;
+            }
+        }
+
+        .bar-1-x {
+            transform: translateY(10px) rotateZ(225deg);
+            transform-origin: center;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bar-2-x {
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .bar-3-x {
+            transform: translateY(-5px) rotateZ(-225deg);
+            transform-origin: center;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+    
+    .header {
+        height: 3rem;
+        width: 100%;
+        background: $light-blue;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        @media only screen and (max-width: $medium) {
+            justify-content: center;
+        }
+    
+        img {
+            margin-left: 28px;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 5px;
+        }
+    
+        h3 {
+            color: $white;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+    
+            @media only screen and (max-width: $medium) {
+                visibility: hidden;
+            }
+    
+        }
+    
+        a {
+            text-decoration: none;
+    
+            &:visited {
+                color: $white;
+            }
+        }
+        
+    }
+   
+}

@@ -1,0 +1,69 @@
+@import '../../Assets/Styles/shared';
+
+.home-page-wrapper {
+    position: relative;
+    margin-top: -1rem;
+    box-sizing: border-box;
+    height: 120vh;
+    width: 100vw;
+    padding: 2rem;
+    background: linear-gradient( rgb(122, 189, 255)0%, rgba(246,246,252,1) 100% );
+    z-index: 10;
+
+    @media only screen and (max-width: $medium) {
+        height: 100%;
+    }
+
+    h1 {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        color: $white;
+        font-size: 6rem;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px black;
+
+        @media only screen and (max-width: $medium) {
+            font-size: 3.5rem;
+        }
+    }
+
+    article {
+        position: relative;
+        z-index: 10;
+
+        p {
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px grey;
+        }
+
+        img {
+            width: 75vw;
+            position: absolute;
+            top: -25rem;
+            left: 10rem;
+            z-index: -2;
+            transform: rotateZ(-22.2deg);
+
+            @media only screen and (max-width: $medium) {
+                top: -20rem;
+                left: 0;
+            }
+        }
+
+        .make-bold {
+            font-weight: 700;
+        }
+
+        .animate-text {
+            &:hover {
+                color: #b1ff80;
+                transform: translateX(360deg);
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

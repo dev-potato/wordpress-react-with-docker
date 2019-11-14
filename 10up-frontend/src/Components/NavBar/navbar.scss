@@ -1,0 +1,129 @@
+@import '../../Assets/Styles/shared';
+
+.navbar {
+    width: 100vw;
+    background: $blue;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
+    height: 3.5rem;
+    
+    @media only screen and (max-width: $medium) {
+        height: auto;
+        opacity: 0.95;
+
+        .hide-nav {
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    @media only screen and (max-width: $medium) {
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative; 
+        
+        a {
+            padding: 20px;
+            color: $orange;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1rem;
+            transition: all 0.5s ease-in-out;
+    
+            &:hover {
+                width: auto;
+                color: $yellow;
+                background: $dark-blue;
+            }
+    
+            &:active {
+                background: $dark-blue;
+            }
+        }
+        
+        @media only screen and (max-width: $medium) {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+
+
+    .menu-dropdown {
+        padding: 20px;
+        color: $orange;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1rem;
+        text-decoration: underline;
+        transition: all 0.5s ease-in-out;
+        
+        @media only screen and (max-width: $medium) {
+          
+                &.collapse {
+                    height: 0px;
+                    transition: all 0.5s ease-in-out;
+                }
+        
+                &.expand {
+                    height: 125px;
+                    transition: all 0.5s ease-in-out;
+                
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            width: auto;
+            color: $yellow;
+            background: $dark-blue;
+        }
+
+        &:active {
+            background: $dark-blue;
+        }
+    }
+
+    .link-reveal {
+        position: absolute;
+        background: $blue;
+        transition: all 0.5s ease-in-out;
+        top: 3.5rem;
+        left: 0;
+        width: 207px;
+        
+        @media only screen and (max-width: $medium) {
+            width: 100%;
+            top: 3.5rem;
+            display: inline;
+        }
+    }
+
+    .hide {
+        visibility: hidden;
+        position: absolute;
+        top: 3.25rem;
+        z-index: -5;
+        transition: all 0.2s ease-in;
+        
+        @media only screen and (max-width: $medium) {
+            top: 3.5rem;
+            left: -5rem;
+        }
+
+        a {
+            position: relative;
+            z-index: -111111;
+            opacity: 0;
+        }
+    }
+}

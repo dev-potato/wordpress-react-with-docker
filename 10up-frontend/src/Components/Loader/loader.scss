@@ -1,0 +1,49 @@
+@import '../../Assets/Styles/shared';
+
+.logo-loader-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 3rem;
+    right: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $light-gray;
+
+    
+    .logo-loader {
+        width: 50%;
+        position: relative;
+        z-index: 100;
+        animation: Pulse-loader;
+        animation-iteration-count: infinite;
+        animation-duration: 1.2s;
+    }
+}
+
+.show {
+   right: 0;
+   transition: all 0.4s ease;
+}
+
+.hide {
+    right: 100%;
+    transition: all 0.4s ease;
+    transition-delay: 1.5s;
+}
+
+@keyframes Pulse-loader {
+    0% {
+        opacity: 0.01;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.01;
+    }
+}
