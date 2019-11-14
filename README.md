@@ -18,8 +18,8 @@ Backend:
 Frontend:
 - Navigate to /10up-frontend `cd 10up-frontend`
 - Install node_modules 
-    NPM: In the terminal run `npm install`
-    Yarn: In the terminal run `yarn`
+    - NPM: In the terminal run `npm install`
+    - Yarn: In the terminal run `yarn`
  
  - Finally run `yarn start`
 
