@@ -4,8 +4,10 @@
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
   height: 100vh;
+  overflow-y: none;
 
   .router-wrapper {
     padding-top: 1rem;
+    overflow-y: none;
   }
 }

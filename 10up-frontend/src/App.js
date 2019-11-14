@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import {routes} from './Components/Routes';
 import Header from './Components/Header/header';
+import Footer from './Components/Footer/footer';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 
@@ -48,6 +49,7 @@ export default class App extends Component {
               />
          ))}
         </div>
+        <Footer />
        </BrowserRouter>
       </div>
     );

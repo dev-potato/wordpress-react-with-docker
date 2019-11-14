@@ -42,12 +42,19 @@ class Header extends Component {
       ) 
     }
 
-    closeMenuOnClick = () => {
-        if (window.location.href.includes('/blog/*') && !this.props.isLoading) {
+    closeMenuOnClick = (url) => {
+        if (window.location.href.includes('/blog/post/') && url == '/blog') {
+            this.setState({
+                mobileMenuActive: false,
+            }, () => this.props.updateParent())
+
+        } 
+        else if (window.location.href.includes(url) && !this.props.isLoading) {
             this.setState({
                 mobileMenuActive: false,
             })
-        } else {
+        } 
+        else {
             this.setState({
                 mobileMenuActive: false,
             }, () => this.props.updateParent())
@@ -79,10 +86,10 @@ class Header extends Component {
                         <span className={ !mobileMenuActive ? 'bar-3' : ' bar-3-x' }></span>
               </div>
               <div className="header">
-                    <Link onClick={this.closeMenuOnClick} to="/"><img src={Logo}/></Link>
+                    <Link onClick={ () => this.closeMenuOnClick('/')} to="/"><img src={Logo}/></Link>
                     <h3>Eats.</h3>
               </div> 
-                <div className={ width < 768 && !mobileMenuActive ? 'show-nav hide' :  'show-nav'}>
+                <div className={ width <= 1024 && !mobileMenuActive ? 'show-nav hide' :  'show-nav'}>
                   <NavBar
                     closeMenuOnClick={this.closeMenuOnClick}
                     menuOpen={this.state.mobileMenuActive} />

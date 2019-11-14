@@ -84,26 +84,24 @@ export default class Contact extends Component {
               <form action="/action_page.php">
                 <div className="name-wrapper">
                   <span>
-                    <label for="firstName">First Name</label>
+                    <label>First Name</label>
                     <input
                       type="text"
                       id="firstName"
                       name="firstname"
                       placeholder="First Name"
                       value={firstName}
-                      // onBlur={ (e) => this.validateForm(e.target) }
                       onChange={ (e) => this.setState({ firstName: e.target.value})}
                     />
                   </span>
                   <span>
-                    <label for="lastName">Last Name</label>
+                    <label>Last Name</label>
                     <input
                       type="text"
                       id="lastName"
                       name="lastname"
                       placeholder="Last Name"
                       value={lastName}
-                      // onBlur={ (e) => this.validateForm(e.target) }
                       onChange={ (e) => this.setState({ lastName: e.target.value})}
                     />
                   </span>
@@ -116,7 +114,6 @@ export default class Contact extends Component {
                   name="email"
                   placeholder="Email"
                   value={email}
-                  // onBlur={ (e) => this.validateForm(e.target) }
                   onChange={ (e) => this.setState({ email: e.target.value})}
                 />
   
@@ -126,7 +123,6 @@ export default class Contact extends Component {
                   name="message"
                   placeholder="Message"
                   value={message}
-                  // onBlur={ (e) => this.validateForm(e.target) }
                   onChange={ (e) => this.setState({ message: e.target.value})}
                 ></textarea>
 

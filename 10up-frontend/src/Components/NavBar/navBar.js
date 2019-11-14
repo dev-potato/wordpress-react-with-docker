@@ -34,13 +34,13 @@ export default class NavBar extends Component {
                       onMouseLeave={this.handleMouseHover}>
                        Lunch/Dinner Menu
                       <div className={ hovering ? "link-reveal" : "link-reveal hide"}>
-                          <Link onClick={this.props.closeMenuOnClick} to="/menu/lunch">Lunch</Link>
-                          <Link onClick={this.props.closeMenuOnClick} to="/menu/dinner">Dinner</Link>
+                          <Link onClick={ () => this.props.closeMenuOnClick("/menu/lunch")} to="/menu/lunch">Lunch</Link>
+                          <Link onClick={ () => this.props.closeMenuOnClick("/menu/dinner")} to="/menu/dinner">Dinner</Link>
                       </div>
                   </div>
-                  <Link onClick={this.props.closeMenuOnClick} to="/blog">Blog</Link>
-                  <Link onClick={this.props.closeMenuOnClick} to="/about">About Us</Link>
-                  <Link onClick={this.props.closeMenuOnClick} to="/contact">Contact</Link>
+                  <Link onClick={ () => this.props.closeMenuOnClick("/blog")} to="/blog">Blog</Link>
+                  <Link onClick={ () => this.props.closeMenuOnClick("/about")} to="/about">About Us</Link>
+                  <Link onClick={ () => this.props.closeMenuOnClick('/contact')} to="/contact">Contact</Link>
                </nav>
             </div>
         )

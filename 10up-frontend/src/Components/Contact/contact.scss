@@ -1,5 +1,13 @@
 @import '../../Assets/Styles/shared';
 
+.form-wrapper {
+
+
+    @media only screen and (max-width: $small) {
+        margin-top: -7rem;
+    }
+}
+
 .contact-wrapper {
     margin-top: 5%;
     position: relative;
@@ -24,7 +32,7 @@
     section {
         position: relative;
         margin-top: 2rem;
-        max-width: 33vw;
+        max-width: 80vw;
         height: 50vh;
         margin: auto;
         border: 1px solid $dark-blue;
@@ -38,7 +46,8 @@
 
         @media only screen and (max-width: $small) {
             max-width: 85vw;
-            height: 75vh;
+            height: 65vh;
+            padding: 0 1rem;
         }
     }
     
