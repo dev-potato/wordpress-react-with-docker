@@ -4,8 +4,6 @@ import "./contact.scss";
 import axios from "axios";
 import LinkButton from '../LinkButton/linkButton';
 
-const API_PATH = 'http://localhost:8001/api/contact/index.php';
-
 export default class Contact extends Component {
   constructor(props) {
     super(props);

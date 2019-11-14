@@ -9,8 +9,11 @@ Backend:
  - Install Docker if you haven't done so already
     - Mac: https://docs.docker.com/v17.09/docker-for-mac/install/
     - Windows: https://docs.docker.com/v17.09/docker-for-windows/install/
+
+- Once installed start Docker Desktop
 - From the command line run  `docker-machine start`
-- Once your docker VM is running enter `docker-compose up -d` in the command line.
+- Once your docker VM is running run `docker-compose up -d`
+- Run `docker-compose start`
 
 Frontend:
 - Navigate to /10up-frontend `cd 10up-frontend`
@@ -19,5 +22,7 @@ Frontend:
     Yarn: In the terminal run `yarn`
  
  - Finally run `yarn start`
+
+Once you have both the WordPress CMS running and the React application running open a browser and navigate to http://localhost:3000
 
 Thank you for stopping by.

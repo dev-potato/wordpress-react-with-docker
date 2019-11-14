@@ -25,8 +25,8 @@ export default class BlogPost extends Component {
     }
 
     render() {
-        const { post, isLoaded } = this.state;
-        console.log(post);
+      const { post, isLoaded } = this.state;
+      
       if (isLoaded) {
             return (
                 <div className="blog-post">
